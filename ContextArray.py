@@ -38,8 +38,8 @@ class ContextArray:
         :type context: List
         """
 
-        new_elements = self.__elements
-        new_contexts = self.__contexts
+        new_elements = self.__elements.copy()
+        new_contexts = self.__contexts.copy()
 
         # For each element
         for i in range(len(self.__elements)):
@@ -54,8 +54,10 @@ class ContextArray:
 
             score = similar_contextual_elements/len(element_context)
 
-            # Move the element with the current context based on score
+            # Score the element with the current context
             new_index = len(self.__contexts) - 1 - math.floor(score * (len(self.__contexts)-1))
+
+            # Based on score calculate the new index for this element
             new_elements.insert(new_index, new_elements.pop(i))
             new_contexts.insert(new_index, new_contexts.pop(i))
 
