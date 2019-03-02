@@ -66,7 +66,7 @@ class ContextArray:
 
     def delete(self, element):
         """
-        Deletes an object from the array.
+        Deletes the first instance of the given element from the array.
 
         :param element: The object to be deleted.
         :type element: Object
@@ -79,7 +79,7 @@ class ContextArray:
 
     def find(self, element):
         """
-        Returns the index where element is located, -1 if not located.
+        Returns the index where the first instance of element is located, -1 if not located.
 
         :param element: The element we wish to find.
         :type element: Object
