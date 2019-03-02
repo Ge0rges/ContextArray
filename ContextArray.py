@@ -31,6 +31,9 @@ class ContextArray:
         Updates the ordering of the array based on the passed context. We assume that this will improve the average case
         of find() and delete() by moving things up to the front of the array when the context is familiar.
 
+        This is an expensive function which is meant to call it's content on a seprate background thread (which it
+        currently does not do).
+
         :param context:
         :type context: List
         """
