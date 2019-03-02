@@ -1,5 +1,6 @@
 import math
 
+
 class ContextArray:
     """
     An array that updates itself based on the current computing context in order to find elements that are more likely
@@ -25,7 +26,7 @@ class ContextArray:
         self.__elements.insert(0, element)
         self.__contexts.insert(0, context)
 
-    def updateContext(self, context):
+    def update_context(self, context):
         """
         Updates the ordering of the array based on the passed context. We assume that this will improve the average case
         of find() and delete() by moving things up to the front of the array when the context is familiar.
