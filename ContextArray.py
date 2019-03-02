@@ -4,7 +4,7 @@ import math
 class ContextArray:
     """
     An array that updates itself based on the current computing context in order to find elements that are more likely
-    to appear soon, faster. This is based on the encoding principle of the brain.
+    to appear soon, faster. This is based on the encoding specificity principle of the brain.
     Insert: O(1)
     updateContext: O(n * number of contextual elements)
     delete: O(find)
